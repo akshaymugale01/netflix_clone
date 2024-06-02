@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import  { useEffect, useState, useContext } from "react";
 import { FirebaseContext } from "../context/FirbaseContext";
 
 function useContent(target) {
@@ -21,7 +21,7 @@ function useContent(target) {
       .catch((error) => {
         console.log(error.message);
       });
-  }, []);
+  }, [firebase, target]);
 
   return { [target]: content };
 }
